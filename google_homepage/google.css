@@ -1,0 +1,129 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    margin-top: 0 auto;
+    text-align: center;
+}
+
+.top-nav-bar {
+    position: relative;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 0;
+    text-align: right;
+}
+
+.sign-in-button {
+    padding: 8px 8px;
+    color: white;
+    background-color: rgba(0, 153, 255, 0.897);
+    border-width: 0;
+}
+
+li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+li:hover {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style-type: none;
+    text-decoration: underline;
+    opacity: 0.70;
+    margin-right: 20px;
+}
+
+.search-box,
+.search-box:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    border: 1px solid rgb(223, 225, 229);
+    border-radius: 25px 25px 25px 25px;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.28);
+}
+
+.search-buttons {
+    font-size: 14px;
+    color: gray;
+    width: 150px;
+    height: 36px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 5px 0 5px;
+}
+
+#search-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.search-buttons:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222222;
+}
+
+footer,
+.above-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: gray;
+    font-size: 13px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    border: 1px solid #e4e4e4;
+}
+
+.above-footer {
+    position: fixed;
+    bottom: 42px;
+    font-size: 14px;
+    padding: 10px 0 10px 40px;
+}
+
+.footer-li {
+    padding-left: 0px;
+    padding-right: 0px;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+html,
+body {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+main {
+    margin-top: 200px;
+}
