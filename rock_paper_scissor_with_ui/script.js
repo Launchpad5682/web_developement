@@ -27,11 +27,14 @@ function playRound(playerSelection, computerSelection) {
 
 function endResult(playerScore, computerScore) {
     if (playerScore > computerScore) {
-        console.log(`You Won! with ${playerScore} : ${computerScore}`);
+        //console.log(`You Won! with ${playerScore} : ${computerScore}`);
+        winner.innerHTML = `You Won! with ${playerScore} : ${computerScore}`;
     } else if (computerScore > playerScore) {
-        console.log(`You Lost! with ${playerScore} : ${computerScore}`);
+        //console.log(`You Lost! with ${playerScore} : ${computerScore}`);
+        winner.innerHTML = `You Lost! with ${playerScore} : ${computerScore}`;
     } else {
-        console.log(`It is draw with a score of ${playerScore}`);
+        //console.log(`It is draw with a score of ${playerScore}`);
+        winner.innerHTML = `It is draw with a score of ${playerScore}`;
     }
 }
 
@@ -53,7 +56,9 @@ function game(pick) {
     } else {
         computerScore++;
     }
-    console.log(`Score of the player: ${playerScore} / Score of the computer: ${computerScore}`);
+    player.innerHTML = "Player: " + playerScore;
+    computer.innerHTML = "Computer: " + computerScore;
+    //console.log(`Score of the player: ${playerScore} / Score of the computer: ${computerScore}`);
     gameCount++;
     if (gameCount == 5) {
         endResult(playerScore, computerScore);
@@ -71,5 +76,11 @@ function eg(event) {
  */
 
 const buttons = document.querySelectorAll(`.btn`);
-// here we can only keep an instance of the function so I'm calling this using function
+// for displaying points
+const player = document.getElementById(`Player`);
+const computer = document.getElementById(`Computer`);
+player.innerHTML = "Player: " + playerScore;
+computer.innerHTML = "Computer: " + computerScore;
+const winner = document.getElementById(`Winner`);
+// here we can only keep an instance of the function so I'm calling this using anonymous function
 buttons.forEach(button => button.addEventListener("click", () => game(button.id)));

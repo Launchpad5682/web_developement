@@ -1,0 +1,39 @@
+img {
+    width: auto;
+    height: 20rem;
+    margin: 3rem;
+}
+
+.buttons {
+    align-items: flex-end;
+}
+
+.container {
+    background-color: blueviolet;
+    margin-left: 10rem;
+    padding: 1rem 0;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#Player,
+#Computer {
+    margin: 2rem 3rem;
+    display: inline-block;
+}
+
+#winner {
+    font-weight: 100;
+}
+
+h1,
+h2 {
+    color: rebeccapurple;
+    text-align: center;
+}
+
+html {
+    background-color: pink;
+}
