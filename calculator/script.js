@@ -6,9 +6,14 @@ const symbols = document.querySelectorAll(`input.symbol`);
 const AC = document.getElementById(`AC`);
 const backspace = document.getElementById(`backspace`);
 const equal = document.getElementById(`equal`);
+const decimal = document.getElementById(`decimal`);
 
 //global var
-window = document.addEventListener(`keydown`, (event) => {
+window = document.addEventListener(`keydown`, () => keyEvent(event));
+
+// functions
+
+function keyEvent(event) {
     console.log(event.keyCode);
     console.log(event.key);
     if (event.key >= 0 && event.key <= 9)
@@ -21,13 +26,19 @@ window = document.addEventListener(`keydown`, (event) => {
         operate();
     if (event.keyCode === 46)
         allClear();
-});
-
-// functions
+    if (event.key == `.`)
+        decimalAppend();
+}
 
 // split a string 
 function operate() {
     str = eval(str);
+    update();
+}
+
+// advance this function later
+function decimalAppend() {
+    str += `.`;
     update();
 }
 
@@ -47,7 +58,14 @@ const numericOperation = (value) => {
 }
 
 const operator = (value) => {
-    str += value;
+    if (str[str.length - 1] == `+` ||
+        str[str.length - 1] == `-` ||
+        str[str.length - 1] == `*` ||
+        str[str.length - 1] == `/`)
+        return;
+    else {
+        str += value;
+    }
     update();
 }
 
@@ -72,3 +90,5 @@ AC.addEventListener(`click`, allClear);
 backspace.addEventListener(`click`, delSingle);
 
 equal.addEventListener(`click`, operate);
+
+decimal.addEventListener(`click`, decimalAppend);

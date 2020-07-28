@@ -1,6 +1,7 @@
 * {
     margin: auto;
-    background-color: rgb(77, 77, 77);
+    /*background-color: rgb(77, 77, 77);*/
+    background-color: black;
 }
 
 div#base {
@@ -10,7 +11,7 @@ div#base {
     width: 32em;
     background-color: rgb(44, 44, 44);
     border-radius: 3rem;
-    box-shadow: 6px 6px 5px white;
+    box-shadow: 16px 16px 25px rgb(209, 209, 209);
 }
 
 #input-text-field,
@@ -47,14 +48,15 @@ input.key,
 input.symbol,
 input.allClear,
 input.result,
-input.backspace {
+input.backspace,
+input.decimal {
     text-align: center;
     display: inline-block;
     background-color: grey;
     height: 100%;
     width: 100%;
     outline: none;
-    border: solid white;
+    border: solid;
     border-radius: 1.2rem;
     font-size: x-large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -91,4 +93,16 @@ h3#Calculator {
 
 h3#Calculator:hover {
     color: orangered;
+}
+
+footer#fc {
+    margin-top: 100px;
+    text-align: center;
+    font-size: x-large;
+    color: grey;
+    font-family: cursive;
+}
+
+footer#fc :hover {
+    color: red;
 }
