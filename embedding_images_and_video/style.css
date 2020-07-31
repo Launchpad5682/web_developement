@@ -1,0 +1,63 @@
+nav {
+    background-color: white;
+    height: 50px;
+}
+
+div#searchBox {
+    padding-left: 30%;
+}
+
+input#searchBox {
+    width: 700px;
+    padding-left: 20px;
+}
+
+input#searchButton {
+    width: 70px;
+    font-size: medium;
+    border-style: solid;
+}
+
+input#searchBox,
+input#searchButton {
+    height: 35px;
+    border-radius: 4rem;
+    outline: none;
+}
+
+main {
+    padding-left: 60px;
+    background-color: white;
+    float: left;
+    width: 63%;
+}
+
+iframe {
+    width: 100%;
+    height: 555px;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    height: 100%;
+    background-color: white;
+}
+
+div.filler {
+    padding-top: 10px;
+    display: flex;
+    background-color: white;
+    height: 100px;
+}
+
+img.filler {
+    width: 200px;
+}
+
+div.metadata {
+    display: inline-block;
+    padding-left: 10px;
+    background-color: white;
+    width: 100%;
+}
